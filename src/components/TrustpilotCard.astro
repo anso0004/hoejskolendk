@@ -1,19 +1,22 @@
 ---
 import { Image } from "astro:assets";
 import trustpilot from "../assets/images/trustpilot.svg";
+const { url = "#", name = "", date = "", anmeldelse = "" } = Astro.props;
 ---
 
 <section class="bg-brown-100 rounded-border_radius-43 p-ml max-w-[26.563rem]">
-  <div class="flex justify-between mb-xs">
-    <p class="font-sans text-p font-bold">William D. Birch</p>
-    <p class="font-sans text-p font-bold">20. juni 2024</p>
-  </div>
-  <div class="flex mb-m">
-    <Image src={trustpilot} alt="Trustpilotstjerne" />
-    <Image src={trustpilot} alt="Trustpilotstjerne" />
-    <Image src={trustpilot} alt="Trustpilotstjerne" />
-    <Image src={trustpilot} alt="Trustpilotstjerne" />
-    <Image src={trustpilot} alt="Trustpilotstjerne" />
-  </div>
-  <p class="font-sans text-p font-regular">Hvis man gerne vil ud og rejse, men også vil møde nogle nye mennesker. Så vil jeg helt klart anbefale Höjskolendk. Jeg havde den fedeste tur fra Januar til april måned i 2024 på turen som hedder, Hawaii, Australien, Japan, Bali og Gilli Island.</p>
+  <a href={url}>
+    <div class="flex justify-between mb-xs">
+      <p class="font-sans text-p font-bold">{name}</p>
+      <p class="font-sans text-p font-bold">{date}</p>
+    </div>
+    <div class="flex mb-m">
+      <Image src={trustpilot} alt="Trustpilotstjerne" />
+      <Image src={trustpilot} alt="Trustpilotstjerne" />
+      <Image src={trustpilot} alt="Trustpilotstjerne" />
+      <Image src={trustpilot} alt="Trustpilotstjerne" />
+      <Image src={trustpilot} alt="Trustpilotstjerne" />
+    </div>
+    <p class="font-sans text-p font-regular">{anmeldelse}</p>
+  </a>
 </section>
