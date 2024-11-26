@@ -4,22 +4,24 @@ import billede1 from "../assets/images/billede1.png";
 import billede2 from "../assets/images/billede2.png";
 import billede3 from "../assets/images/billede3.png";
 import Button from "../components/Button.astro";
+const { url = "#", title = "", varighed = "", priser = "", image = "", imagealt = "" } = Astro.props;
 ---
 
 <section class="bg-brown-100 max-w-[375px] rounded-border_radius-43">
-  <Image src={billede1} alt="" />
+  <!-- <Image src={billede1} alt="" /> -->
+  <img src={image} alt={imagealt} />
   <div class="p-ml flex flex-col gap-sm">
-    <p class="font-display text-card_small font-bold uppercase">Costa Rica, Mexico & Columbia</p>
+    <p class="font-display text-card_small font-bold uppercase">{title}</p>
     <div>
       <div class="flex gap-xs">
         <p class="font-sans text-p font-bold">Varighed:</p>
-        <p class="font-sans text-p font-regular">2 måneder</p>
+        <p class="font-sans text-p font-regular">{varighed} måneder</p>
       </div>
       <div class="flex gap-xs">
         <p class="font-sans text-p font-bold">Prisr fra:</p>
-        <p class="font-sans text-p font-regular">55.999 kr.</p>
+        <p class="font-sans text-p font-regular">{priser} DKK</p>
       </div>
     </div>
-    <Button variant="primary" size="small" icon="arrowlightsmall.svg" iconalt="pil">Læs mere</Button>
+    <Button variant="primary" size="small" weight="bold" icon="arrowlightsmall.svg" iconalt="pil">Læs mere</Button>
   </div>
 </section>

@@ -4,17 +4,92 @@ import Button from "../components/Button.astro";
 import Link from "../components/Link.astro";
 import { Image } from "astro:assets";
 import thumbsup from "../assets/images/thumbsup.png";
+import hero from "../assets/images/forside.png";
 import arrowdark from "../assets/images/arrowdarksmall.svg";
 import TrustpilotCard from "../components/TrustpilotCard.astro";
 import SmallCard from "../components/SmallCard.astro";
+import OrangeCard from "../components/OrangeCard.astro";
 ---
 
 <MainLayout title="Titel">
   <article>
+    <!-- Hero -->
+    <section>
+      <div class="relative z-50 space-y-11xl mb-[400px]">
+        <div>
+          <p class="font-display text-h1 font-bold uppercase">Højskole i <span class="text-orange-500">udlandet</span></p>
+          <p class="font-sans text-h4 font-bold max-w-[526px]">Er du klar til dit livs eventyr? Når du rejser med os, får du dit livs eventyr og vi garanterer dig masser af fællesskab, fantastiske oplevelser og meningsfuld læring.</p>
+        </div>
+        <div class="space-y-m">
+          <div class="max-w-[448px]">
+            <Button weight="bold" variant="primary" size="medium" length="lengthmedium" icon="arrowlightsmall.svg" iconalt="pil">Find rejse</Button>
+          </div>
+          <div class="max-w-[322px]">
+            <Button weight="bold" variant="secondary" size="medium" length="lengthmedium" icon="arrowdarksmall.svg" iconalt="pil">Find rejse</Button>
+          </div>
+        </div>
+      </div>
+      <Image class="absolute z-30 right-[124px] top-[61px]" src={hero} alt="Gruppebillede" />
+    </section>
+    <!-- Vælg destination -->
+    <section class="space-y-l pt-[211px]">
+      <p class="font-display text-h2 font-bold uppercase">Vælg <span class="text-orange-500">destination</span></p>
+      <div class="flex justify-between gap-xl">
+        <SmallCard url="#" image="billede1.png" title="Costa Rica, Mexico & Columbia" varighed="2" priser="55.999" />
+        <SmallCard url="#" image="billede2.png" title="Caribien, Hawaii & Mexico" varighed="3" priser="67.900" />
+        <SmallCard url="#" image="billede3.png" title="Australien, Japan, Bali & Gili Islands" varighed="3" priser="64.500" />
+        <OrangeCard url="#" title="" varighed="" priser="" />
+      </div>
+    </section>
+    <!-- Trustpilot -->
+    <section class="space-y-l mt-10xl">
+      <div class="space-y-s">
+        <p class="font-display text-h2 font-bold uppercase">Trustpilot <span class="text-green-500">anmeldelser</span></p>
+        <p class="font-sans text-h4 font-bold">Vi går op i at skabe den bedste oplevelser for vores elever. <br />Læs alle vores anmeldelser på Trustpilot.dk <Link variant="secondary" weight="bold" href="https://dk.trustpilot.com/review/www.hojskolendk.dk">Trustpilot.dk</Link></p>
+      </div>
+      <div class="grid grid-cols-3">
+        <div class="space-y-ml">
+          <TrustpilotCard url="#" name="William D. Birch" date="20. juni 2024" anmeldelse="Hvis man gerne vil ud og rejse, men også vil møde nogle nye mennesker. Så vil jeg helt klart anbefale Höjskolendk. Jeg havde den fedeste tur fra Januar til april måned i 2024 på turen som hedder, Hawaii, Australien, Japan, Bali og Gilli Island.." />
+          <TrustpilotCard
+            url="#"
+            name="Karen Mortensen"
+            date="10. april 2024"
+            anmeldelse="Jeg lige kommet hjem fra opholdet Maldiverne, Sri Lanka, Bali og Gili Islands. Jeg kan klart anbefale at rejse med HöjskolenDK. Vores rejseleder Isabella og underviser Astrid har skabt rammerne for en fantastisk tur og jeg er kommet hjem med rygsækken fyldt med dejlige oplevelser."
+          />
+          <TrustpilotCard url="#" name="Laura" date="23. juni 2024" anmeldelse="Jeg var tidligere i år ude og rejse med HöjskolenDK, hvilket uden tvivl var en virkelig fed oplevelse! Blandingen af at rejse med nye venner og opleve nye lande, er virkelig en god kombi!" />
+        </div>
+        <div class="grid content-between">
+          <TrustpilotCard
+            url="#"
+            name="Mikkel Berg"
+            date="20. juni 2024"
+            anmeldelse="Jeg var på turen Hawaii, Australien, Japan, Bali og Gili i foråret 2024 - sikke en oplevelse! Selve rejsen var godt planlagt med fede aktiviteter og udflugter, som man ikke nødvendigvis kunnet ha’ arrangeret, hvis man rejste på egen hånd. Men det, der gjorde rejsen helt speciel var den fantastiske højskolestemning, som var der hele turen igennem. Derudover, var det en fest at have Anne og Henrik som rejseledere - de var virkelig gode. Kan anbefale Højskolendk til alle, der kunne tænke sig en fantastisk rejse og venner for livet.Derudover, var det en fest at have Anne og Henrik som rejseledere - de var virkelig gode. Kan anbefale Højskolendk til alle, der kunne tænke sig en fantastisk rejse."
+          />
+          <TrustpilotCard
+            url="#"
+            name="Nadja"
+            date="23. juni 2024"
+            anmeldelse="Det har var hundrede procent en dejlig oplevelse. Højskolen.dk er den bedste måde og tage på højskole i udlandet på. Godt kontor hjemme i dk, i mit tilfælde søde og dejlige rejseledere og et skønt værdigrundlag både for os elever, men også den måde de rejser i andre lande og kulturer på 🫶"
+          />
+        </div>
+        <div class="grid content-between">
+          <TrustpilotCard url="#" name="Ida Juel Erlandsen" date="20. juni 2024" anmeldelse="Jeg har lige været afsted i 3 måneder på turen Hawaii, Australien, Japan, Bali og Gili. Turen levede op til alle mine forventninger, hvor vi både fik set en masse fede naturoplevelser." />
+          <TrustpilotCard
+            url="#"
+            name="Emma Huese"
+            date="16. juni 2024"
+            anmeldelse="Jeg er netop hjemvendt, solbrun, glad og fyldt op med minder, efter fem skønne uger i paradis. Höjskolendks sommerophold Bali, Gili og Lombok island var enormt velegnet til mig, som til dagligt har hoved dybt begravet i studiebøgerne. Før jeg fandt höjskolens geniale tiltag, der er placeret i sommerferien, havde jeg nået at opgivet drømmen om en grupperejse med andre unge, langt væk hjemmefra. Dette var derfor den perfekte løsning.  På fem uger har jeg formået, at opleve så meget indonesisk kultur, spændende mad, storslået natur, som ikke engang øjet selv forstår, samt vilde udflugter, som blandt andet river rafting, bjergbestigning, vandfaldsture og meget mere.  Derudover var det ofte med en drink i hånden, og fødderne i sandet, sammen med mine 29 nye venner.   Tak for den bedste tur! "
+          />
+        </div>
+      </div>
+    </section>
+  </article>
+
+  <!-- <article>
     <h1 class="bg-orange-500 mt-11xl font-display">Index overskrift</h1>
     <Button class="">Klik!</Button>
     <p>Link til <Link href="https://www.kea.dk" target="_blank">En anden side</Link></p>
-    <Image src={thumbsup} alt="" />
+    <Image src={hero} alt="Gruppebillede" />
   </article>
   <TrustpilotCard url="#" name="Fornavn Efternavn" date="00. januar 2024" anmeldelse="Her står en anmeldelse." />
   <section class="grid grid-flow-col gap-xs">
@@ -34,5 +109,5 @@ import SmallCard from "../components/SmallCard.astro";
   <Button variant="secondary" size="medium" length="lengthmedium">medium Secondary</Button>
   <Button variant="primary" size="large" length="lengthxxlarge">large Secondary</Button>
   <Button variant="secondary" size="large" length="lengthmedium">large Secondary</Button>
-  <Button variant="secondary" size="xlarge" length="lengthmedium">large Secondary</Button>
+  <Button variant="secondary" size="xlarge" length="lengthmedium">large Secondary</Button> -->
 </MainLayout>
