@@ -74,9 +74,9 @@ export default {
     borderRadius: {
       DEFAULT: "1.25rem",
       none: "0px",
-      "border_radius-10": "var(--numberscale-1's-10)",
+      "border_radius-10": "10px",
       "border_radius-43": "43px",
-      "border_radius-full": "var(--numberscale-2's-full)",
+      "border_radius-full": "999px",
     },
 
     extend: {
