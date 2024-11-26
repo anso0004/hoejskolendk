@@ -62,69 +62,27 @@ export default {
       "neutrals-900": "rgba(61, 61, 61, 1)",
       "neutrals-950": "rgba(17, 17, 17, 1)",
     },
-    /* Tilføj din egen farvepalette nedenfor */
-    // colors: {
-    //     transparent: 'transparent',
-    //     current: 'currentColor',
-    //     'farvenavn': {
-    //         50: '#hexkode',
-    //         100: '#hexkode',
-    //         200: '#hexkode',
-    //         300: '#hexkode',
-    //         400: '#hexkode',
-    //         500: '#hexkode',
-    //         600: '#hexkode',
-    //         700: '#hexkode',
-    //         800: '#hexkode',
-    //         900: '#hexkode',
-    //     },
-    //     'white': '#fff',
-    //     'black': '#000',
-    // },
-
-    /* Tilføj din egen spacing nedenfor */
-    // spacing: {
-    //     'm': '40px',
-    // },
-
-    /* Tilføj fonte herunder - husk også at tilføje webfonte i head-sektionen i MainLayout  */
-    // fontFamily: {
-    //     sans: ['Prompt', 'sans-serif'],
-    //     'display': ['Courier', 'monospace'], /* eksempel på ekstra font */
-    // },
-
-    /* Tilføj dit typografiske hierarki herunder */
-    // fontSize: {
-    //     base: ['1rem', { lineHeight: '1.5rem' }],
-    //     large: ['2.5rem', { lineHeight: '3.75rem' }],
-    //   },
-
-    /* Tilføj dit fontvægt-hierarki nedenfor */
-    //   fontWeight: {
-    //     regular: '400',
-    //   },
-
     /* Borders - borderstørrelser herunder */
-    // borderWidth: {
-    //     DEFAULT: '1px',
-    //     0: '0px',
-    //     2: '2px',
-    // },
-
+    borderWidth: {
+      DEFAULT: "1px",
+      1: "var(--numberscale-1's-1)",
+      2: "var(--numberscale-1's-2)",
+      3: "var(--numberscale-1's-3)",
+      4: "var(--numberscale-1's-4)",
+    },
     /* Border radius størrelser herunder */
-    // borderRadius: {
-    //     DEFAULT: '1.25rem',
-    //     none: '0px',
-    // },
-
-    /* Box shadows herunder */
-    // boxShadow: {
-    //     drop25: '4px 4px 4px 0 rgb(0 0 0 / 0.25)', /* x y blur spread farve / opacity */
-    // },
+    borderRadius: {
+      DEFAULT: "1.25rem",
+      none: "0px",
+      "border_radius-10": "var(--numberscale-1's-10)",
+      "border_radius-43": "43px",
+      "border_radius-full": "var(--numberscale-2's-full)",
+    },
 
     extend: {
       /* Tilføj din egen spacing nedenfor */
       spacing: {
+        // Numberscale
         "numberscale-2's-2": "2px",
         "numberscale-2's-4": "4px",
         "numberscale-2's-6": "6px",
@@ -149,13 +107,7 @@ export default {
         "numberscale-1's-8": "8px",
         "numberscale-1's-9": "9px",
         "numberscale-1's-10": "10px",
-        1: "var(--numberscale-1's-1)",
-        2: "var(--numberscale-1's-2)",
-        3: "var(--numberscale-1's-3)",
-        4: "var(--numberscale-1's-4)",
-        "border_radius-10": "var(--numberscale-1's-10)",
-        "border_radius-43": "43px",
-        "border_radius-full": "var(--numberscale-2's-full)",
+        // Spacing
         xxs: "var(--numberscale-2's-4)",
         xs: "var(--numberscale-2's-8)",
         s: "var(--numberscale-2's-12)",
@@ -178,34 +130,32 @@ export default {
 
       // },
       /* Tilføj fonte herunder - husk også at tilføje webfonte i head-sektionen i MainLayout  */
-      // fontFamily: {
-      //     sans: ['Prompt', 'sans-serif'],
-      //     'display': ['Courier', 'monospace'], /* eksempel på ekstra font */
-      // },
+      fontFamily: {
+        sans: ["Open Sans", "sans-serif"],
+        display: ["Kanit", "sans-serif"],
+      },
       /* Tilføj dit typografiske hierarki herunder */
-      // fontSize: {
-      //     base: ['1rem', { lineHeight: '1.5rem' }],
-      //     large: ['2.5rem', { lineHeight: '3.75rem' }],
-      //   },
+      fontSize: {
+        base: ["1rem", { lineHeight: "1.5rem" }],
+        h1: ["7.25rem", { lineHeight: "10.875rem" }],
+        h2: ["4.375rem", { lineHeight: "5.469rem" }],
+        h3: ["1.813rem", { lineHeight: "2.719rem" }],
+        h4: ["1.375rem", { lineHeight: "2.063rem" }],
+        p: ["1rem", { lineHeight: "1.rem" }],
+        card_small: ["1.563rem", { lineHeight: "2.234rem" }],
+        button_large: ["1.625rem", { lineHeight: "2,178rem" }],
+        button_medium: ["1.313rem", { lineHeight: "1.969rem" }],
+        button_small: ["1.125rem", { lineHeight: "1.688rem" }],
+        link_large: ["1.375rem", { lineHeight: "2.063rem" }],
+        link_small: ["1rem", { lineHeight: "1.5rem" }],
+        header: ["1.125rem", { lineHeight: "1.688rem" }],
+        footer: ["1.438rem", { lineHeight: "2.156rem" }],
+      },
       /* Tilføj dit fontvægt-hierarki nedenfor */
-      //   fontWeight: {
-      //     regular: '400',
-      //   },
-      /* Borders - borderstørrelser herunder */
-      // borderWidth: {
-      //     DEFAULT: '1px',
-      //     0: '0px',
-      //     2: '2px',
-      // },
-      /* Border radius størrelser herunder */
-      // borderRadius: {
-      //     DEFAULT: '1.25rem',
-      //     none: '0px',
-      // },
-      /* Box shadows herunder */
-      // boxShadow: {
-      //     drop25: '4px 4px 4px 0 rgb(0 0 0 / 0.25)', /* x y blur spread farve / opacity */
-      // },
+      fontWeight: {
+        regular: "400",
+        bold: "700",
+      },
     },
   },
   plugins: [require("@tailwindcss/typography"), require("@tailwindcss/forms"), require("@tailwindcss/aspect-ratio"), require("@tailwindcss/container-queries")],
