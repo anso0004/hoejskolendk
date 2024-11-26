@@ -1,0 +1,24 @@
+---
+import { Image } from "astro:assets";
+import billede1 from "../assets/images/billede1.png";
+import billede2 from "../assets/images/billede2.png";
+import billede3 from "../assets/images/billede3.png";
+---
+
+<section class="bg-brown-100 max-w-[375px] rounded-border_radius-43">
+  <Image src={billede1} alt="" />
+  <div class="p-ml flex flex-col gap-sm">
+    <p class="font-display text-card_small font-bold uppercase">Costa Rica, Mexico & Columbia</p>
+    <div>
+      <div class="flex gap-xs">
+        <p class="font-sans text-p font-bold">Varighed:</p>
+        <p class="font-sans text-p font-regular">2 måneder</p>
+      </div>
+      <div class="flex gap-xs">
+        <p class="font-sans text-p font-bold">Prisr fra:</p>
+        <p class="font-sans text-p font-regular">55.999 kr.</p>
+      </div>
+    </div>
+    <p class="bg-orange-500 p-xs rounded-border_radius-full">Læs mere</p>
+  </div>
+</section>
