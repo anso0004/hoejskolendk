@@ -6,6 +6,7 @@ import { Image } from "astro:assets";
 import thumbsup from "../assets/images/thumbsup.png";
 import arrowdark from "../assets/images/arrowdarksmall.svg";
 import TrustpilotCard from "../components/TrustpilotCard.astro";
+import SmallCard from "../components/SmallCard.astro";
 ---
 
 <MainLayout title="Titel">
@@ -16,6 +17,8 @@ import TrustpilotCard from "../components/TrustpilotCard.astro";
     <Image src={thumbsup} alt="" />
   </article>
   <TrustpilotCard url="#" name="Fornavn Efternavn" date="00. januar 2024" anmeldelse="Her står en anmeldelse." />
+  <SmallCard />
+
   <a href="/#">
     <Button variant="primary" size="xsmall" length="lengthxsmall" icon="arrowdarkmedium.svg" iconalt="pil">xsmall Secondary</Button>
   </a>
