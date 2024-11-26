@@ -1,7 +1,7 @@
 ---
-const { variant = "primary", size = "small", length = "lengthxsmall", icon = "", iconalt = "", fontsize = "" } = Astro.props;
+const { variant = "primary", size = "small", length = "", icon = "", iconalt = "", fontsize = "" } = Astro.props;
 
-const buttonStyling = "rounded-border_radius-full flex justify-between";
+const buttonStyling = "rounded-border_radius-full flex justify-between w-full flex items-center justify-center";
 
 const variantClasses = {
   primary: "bg-orange-500 hover:bg-orange-700 text-brown-100",
@@ -18,10 +18,11 @@ const sizeClasses = {
 
 const lengthClasses = {
   lengthxsmall: "w-[168px]",
-  lengthsmall: "w-[301px]",
-  lengthmedium: "ww-[322px]",
+  lengthsmall: "w-[310px]",
+  lengthmedium: "w-[322px]",
   lengthxlarge: "w-[448px]",
   lengthxxlarge: "w-[197px] h-[425px]",
+  lengthdefault: "w-auto",
 };
 
 const fontClasses = {

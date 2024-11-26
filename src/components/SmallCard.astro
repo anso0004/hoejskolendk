@@ -3,6 +3,7 @@ import { Image } from "astro:assets";
 import billede1 from "../assets/images/billede1.png";
 import billede2 from "../assets/images/billede2.png";
 import billede3 from "../assets/images/billede3.png";
+import Button from "../components/Button.astro";
 ---
 
 <section class="bg-brown-100 max-w-[375px] rounded-border_radius-43">
@@ -19,6 +20,6 @@ import billede3 from "../assets/images/billede3.png";
         <p class="font-sans text-p font-regular">55.999 kr.</p>
       </div>
     </div>
-    <p class="bg-orange-500 p-xs rounded-border_radius-full">Læs mere</p>
+    <Button variant="primary" size="small" icon="arrowlightsmall.svg" iconalt="pil">Læs mere</Button>
   </div>
 </section>
