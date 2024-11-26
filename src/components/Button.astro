@@ -1,21 +1,33 @@
 ---
-const { variant = "primary", size = "small" } = Astro.props;
+const { variant = "primary", size = "small", length = "lengthxsmall", icon = "", iconalt = "" } = Astro.props;
 
-const buttonStyling = "rounded";
+const buttonStyling = "rounded-border_radius-full flex justify-between";
 
 const variantClasses = {
-  primary: "bg-orange-500 hover:bg-orange-700",
-  secondary: "bg-transparant borderWidth-3 border-neutrals-950 hover:bg-slate-700",
+  primary: "bg-orange-500 hover:bg-orange-700 text-brown-100",
+  secondary: "bg-transparant border border-2 border-neutrals-950 hover:bg-neutrals-950 hover:text-brown-100",
 };
 
 const sizeClasses = {
-  xsmall: "px-2 py-2",
-  small: "px-2 py-2",
-  medium: "px-6 py-3 text-xl",
-  large: "px-10 py-5 text-2xl",
+  xsmall: "px-s py-xs",
+  small: "px-xl py-s",
+  medium: "px-xl py-s text-xl",
+  large: "px-ml py-xl text-2xl",
+  xlarge: "px-m py-xl text-2xl",
+};
+
+const lengthClasses = {
+  lengthxsmall: "w-[168px]",
+  lengthsmall: "w-[301px]",
+  lengthmedium: "ww-[322px]",
+  lengthxlarge: "w-[448px]",
+  lengthxxlarge: "w-[197px] h-[425px]",
 };
 ---
 
 <div>
-  <button class:list={[buttonStyling, variantClasses[variant], sizeClasses[size]]}><slot /></button>
+  <button class:list={[buttonStyling, variantClasses[variant], sizeClasses[size], lengthClasses[length]]}>
+    <slot />
+    <img src={icon} alt={iconalt} />
+  </button>
 </div>
