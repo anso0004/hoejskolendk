@@ -1,5 +1,24 @@
 ---
 // Henter parametrene fra Astro.props
-const { href="#", target="_self"} = Astro.props; 
+// const { href = "#", target = "_self" } = Astro.props;
+const { href = "#", target = "_self", variant = "textlink", weight = "standard", fontsize = "" } = Astro.props;
+
+const linkStyling = "";
+const variantClasses = {
+  primary: "text-orange-500 hover:text-orange-700",
+  secondary: "text-green-500 hover:text-green-700",
+};
+const weightClasses = {
+  regular: "font-regular",
+  bold: "font-bold",
+};
+
+const fontClasses = {
+  link_small: "font-link_small",
+  linklarge: "font-link_large",
+};
 ---
-<a href={href} class="underline" target={target}><slot /></a>
+
+<a href={href} target={target} class:list={[linkStyling, variantClasses[variant], weightClasses[weight], fontClasses[fontsize]]}><slot /></a>
+
+<!-- <a href={href} class="underline" target={target}><slot /></a> -->

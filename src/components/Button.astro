@@ -1,5 +1,5 @@
 ---
-const { variant = "primary", size = "small", length = "lengthxsmall", icon = "", iconalt = "" } = Astro.props;
+const { variant = "primary", size = "small", length = "lengthxsmall", icon = "", iconalt = "", fontsize = "" } = Astro.props;
 
 const buttonStyling = "rounded-border_radius-full flex justify-between";
 
@@ -23,10 +23,16 @@ const lengthClasses = {
   lengthxlarge: "w-[448px]",
   lengthxxlarge: "w-[197px] h-[425px]",
 };
+
+const fontClasses = {
+  buttonmall: "text-button_small",
+  buttonmedium: "text-button_medium",
+  buttonlarge: "text-button_large",
+};
 ---
 
 <div>
-  <button class:list={[buttonStyling, variantClasses[variant], sizeClasses[size], lengthClasses[length]]}>
+  <button class:list={[buttonStyling, variantClasses[variant], sizeClasses[size], lengthClasses[length], fontClasses[fontsize]]}>
     <slot />
     <img src={icon} alt={iconalt} />
   </button>
