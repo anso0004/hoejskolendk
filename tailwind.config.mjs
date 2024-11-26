@@ -65,10 +65,10 @@ export default {
     /* Borders - borderstørrelser herunder */
     borderWidth: {
       DEFAULT: "1px",
-      1: "var(--numberscale-1's-1)",
-      2: "var(--numberscale-1's-2)",
-      3: "var(--numberscale-1's-3)",
-      4: "var(--numberscale-1's-4)",
+      1: "1",
+      2: "2",
+      3: "3",
+      4: "4",
     },
     /* Border radius størrelser herunder */
     borderRadius: {
