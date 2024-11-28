@@ -7,21 +7,20 @@ import Button from "../components/Button.astro";
 const { url = "#", title = "", varighed = "", priser = "", image = "", imagealt = "" } = Astro.props;
 ---
 
-<section class="bg-brown-100 max-w-[375px] rounded-border_radius-43">
-  <!-- <Image src={billede1} alt="" /> -->
-  <img src={image} alt={imagealt} />
+<section class="bg-brown-100 rounded-border_radius-43 hover:scale-105 hover: transition-transform cursor-pointer flex flex-col justify-between overflow-hidden">
+  <img class="object-cover h-[371px] w-full" src={image} alt={imagealt} />
   <div class="p-ml flex flex-col gap-sm">
-    <p class="font-display text-card_small font-bold uppercase">{title}</p>
+    <p class="font-display text-card_small font-bold uppercase max-w-[377 px]">{title}</p>
     <div>
       <div class="flex gap-xs">
         <p class="font-sans text-p font-bold">Varighed:</p>
         <p class="font-sans text-p font-regular">{varighed} måneder</p>
       </div>
       <div class="flex gap-xs">
-        <p class="font-sans text-p font-bold">Prisr fra:</p>
+        <p class="font-sans text-p font-bold">Priser fra:</p>
         <p class="font-sans text-p font-regular">{priser} DKK</p>
       </div>
     </div>
-    <Button variant="primary" size="small" weight="bold" icon="arrowlightsmall.svg" iconalt="pil">Læs mere</Button>
+    <Button class="" variant="primary" size="small" weight="bold" icon="arrowlightsmall.svg" iconalt="pil">Læs mere</Button>
   </div>
 </section>
