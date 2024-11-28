@@ -17,8 +17,8 @@ import OrangeCard from "../components/OrangeCard.astro";
     <section>
       <div class="relative z-50 space-y-11xl mb-[400px]">
         <div>
-          <p class="font-display lg:text-h1 md:text-h2 font-bold uppercase">Højskole i <span class="text-orange-500">udlandet</span></p>
-          <p class="font-sans text-h4 font-bold max-w-[526px]">Er du klar til dit livs eventyr? Når du rejser med os, får du dit livs eventyr og vi garanterer dig masser af fællesskab, fantastiske oplevelser og meningsfuld læring.</p>
+          <p class="font-display lg:text-h1 font-bold uppercase">Højskole i <span class="text-orange-500">udlandet</span></p>
+          <p class="font-sans text-h4 font-bold max-w-[35%]">Er du klar til dit livs eventyr? Når du rejser med os, får du dit livs eventyr og vi garanterer dig masser af fællesskab, fantastiske oplevelser og meningsfuld læring.</p>
         </div>
         <div class="space-y-m">
           <div class="max-w-[30%]">
@@ -29,7 +29,7 @@ import OrangeCard from "../components/OrangeCard.astro";
           </div>
         </div>
       </div>
-      <Image class="absolute z-30 right-[124px] top-[61px]" src={hero} alt="Gruppebillede" />
+      <Image class="absolute z-30 right-[124px] top-[61px] lg:w-[49%]" src={hero} alt="Gruppebillede" />
     </section>
     <!-- Vælg destination -->
     <section class="space-y-l pt-[211px]">
@@ -51,7 +51,7 @@ import OrangeCard from "../components/OrangeCard.astro";
         <p class="font-display text-h2 font-bold uppercase">Trustpilot <span class="text-green-500">anmeldelser</span></p>
         <p class="font-sans text-h4 font-bold">Vi går op i at skabe den bedste oplevelser for vores elever. <br />Læs alle vores anmeldelser på Trustpilot.dk <Link variant="secondary" weight="bold" href="https://dk.trustpilot.com/review/www.hojskolendk.dk">Trustpilot.dk</Link></p>
       </div>
-      <div class="grid grid-cols-3">
+      <div class="grid grid-cols-3 gap-ml">
         <div class="space-y-ml">
           <TrustpilotCard url="#" name="William D. Birch" date="20. juni 2024" anmeldelse="Hvis man gerne vil ud og rejse, men også vil møde nogle nye mennesker. Så vil jeg helt klart anbefale Höjskolendk. Jeg havde den fedeste tur fra Januar til april måned i 2024 på turen som hedder, Hawaii, Australien, Japan, Bali og Gilli Island.." />
           <TrustpilotCard
@@ -88,15 +88,38 @@ import OrangeCard from "../components/OrangeCard.astro";
       </div>
     </section>
     <!-- Kom til infomøde -->
-    <section>
-      <p>Kom til infomøde</p>
-      <p>Hvis du drømmer om et fantastisk rejseeventyr med masser af adventure, vilde naturoplevelser og spændende kulturmøder så smut forbi et af vores hyggelige infomøder i København eller Aarhus – eller mød os på et online infomøde.</p>
-      <div>
-        <p>Placering:</p>
-        <p>Dato:</p>
-        <p>Tid:</p>
+    <section class="pt-10xl pb-10xl">
+      <p class="font-display text-h2 font-bold uppercase pb-s">Kom til infomøde</p>
+      <p class="font-sans text-p pb-l max-w-[60%]">Hvis du drømmer om et fantastisk rejseeventyr med masser af adventure, vilde naturoplevelser og spændende kulturmøder så smut forbi et af vores hyggelige infomøder i København eller Aarhus – eller mød os på et online infomøde.</p>
+      <div class="grid grid-cols-4 border-b-1">
+        <p class="font-sans text-p font-bold">Placering:</p>
+        <p class="font-sans text-p font-bold">Dato:</p>
+        <p class="font-sans text-p font-bold">Tid:</p>
       </div>
-      <div></div>
+      <div class="grid grid-cols-4 border-b-1 items-center p-s">
+        <p>København</p>
+        <p>16. januar 2025</p>
+        <p>17-19</p>
+        <Button variant="primary" size="small" weight="bold" icon="arrowlightsmall.svg" iconalt="pil">Tilmeld</Button>
+      </div>
+      <div class="grid grid-cols-4 border-b-1 items-center p-s">
+        <p>Aarhus</p>
+        <p>14. januar 2025</p>
+        <p>17-19</p>
+        <Button class="" variant="primary" size="small" weight="bold" icon="arrowlightsmall.svg" iconalt="pil">Tilmeld</Button>
+      </div>
+      <div class="grid grid-cols-4 border-b-1 items-center p-s">
+        <p>Online</p>
+        <p>13. november 2024</p>
+        <p>17-19</p>
+        <Button class="" variant="primary" size="small" weight="bold" icon="arrowlightsmall.svg" iconalt="pil">Tilmeld</Button>
+      </div>
+      <div class="grid grid-cols-4 border-b-1 items-center p-s">
+        <p>Online</p>
+        <p>21. januar 2024</p>
+        <p>17-19</p>
+        <Button class="" variant="primary" size="small" weight="bold" icon="arrowlightsmall.svg" iconalt="pil">Tilmeld</Button>
+      </div>
     </section>
   </article>
 
