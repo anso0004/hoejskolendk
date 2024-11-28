@@ -115,7 +115,7 @@ export default {
         h2: ["4.375rem", { lineHeight: "5.469rem" }],
         h3: ["1.813rem", { lineHeight: "2.719rem" }],
         h4: ["1.375rem", { lineHeight: "2.063rem" }],
-        p: ["1rem", { lineHeight: "1.rem" }],
+        p: ["1rem", { lineHeight: "1.5rem" }],
         card_small: ["1.563rem", { lineHeight: "2.234rem" }],
         button_large: ["1.625rem", { lineHeight: "2,178rem" }],
         button_medium: ["1.313rem", { lineHeight: "1.969rem" }],
