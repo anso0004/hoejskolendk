@@ -17,7 +17,7 @@ import OrangeCard from "../components/OrangeCard.astro";
     <section>
       <div class="relative z-50 space-y-11xl mb-[400px]">
         <div>
-          <p class="font-display lg:text-h1 font-bold uppercase">Højskole i <span class="text-orange-500">udlandet</span></p>
+          <p class="font-display lg:text-h1 font-bold uppercase fittysmall">Højskole i <span class="text-orange-500">udlandet</span></p>
           <p class="font-sans text-h4 font-bold max-w-[35%]">Er du klar til dit livs eventyr? Når du rejser med os, får du dit livs eventyr og vi garanterer dig masser af fællesskab, fantastiske oplevelser og meningsfuld læring.</p>
         </div>
         <div class="space-y-m">
@@ -149,3 +149,12 @@ import OrangeCard from "../components/OrangeCard.astro";
   <Button variant="secondary" size="large" length="lengthmedium">large Secondary</Button>
   <Button variant="secondary" size="xlarge" length="lengthmedium">large Secondary</Button> -->
 </MainLayout>
+
+<script>
+  import fitty from "fitty";
+  fitty(".fitty");
+  window.addEventListener("load", (event) => {
+    fitty.fitAll();
+  });
+  fitty(".fittysmall", { minSize: 18, maxSize: 115 });
+</script>
